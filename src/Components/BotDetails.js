@@ -16,7 +16,7 @@ const BotDetails = () => {
   return (
     <div className='bot-details'>
       <img src={bot.avatar_url} alt={bot.name}/>
-      <h2>{bot.name}</h2>
+      <h2>Name: {bot.name}</h2>
       <p>class:{bot.bot_class}</p>
       <p>Health:{bot.health}</p>
       <p>Damage:{bot.damage}</p>

@@ -72,7 +72,7 @@ const BotCollection = () => {
     <div className='collection'>
         <h1>Bot Battlr</h1>
     <div className='filters'>
-      |<h2>Filter by Class:</h2>
+      <h2>Filter by Class:</h2>
       {uniqueClasses.map(botclass => (
         <label key={botclass}>
         <input 

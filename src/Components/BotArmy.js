@@ -1,5 +1,4 @@
 import React from 'react'
-//  import  PropTypes  from 'prop-types'
 import { useBot } from '../BotContextProvider'
 import './Bot.css'
 
@@ -31,19 +30,5 @@ const  BotArmy = () => {
     </div>
   )
 }
-// BotArmy.propTypes = {
-//   army: propTypes.arrayOf(
-//     propTypes.shape({
-//       id: propTypes.number.isRequired,
-//       name: propTypes.string.isRequired,
-//       avatar_url: propTypes.string.isRequired,
-//       bot_class:propTypes.string.isRequired,
-//       health: propTypes.number.isRequired,
-//       damage: propTypes.number.isRequired,
-//       armor: propTypes.number.isRequired,
-//     })
-//   ).isRequired,
-//   handleRelease: propTypes.func.isRequired,
-//   handleDischarge: propTypes.func.isRequired,
-// }
+
 export default  BotArmy

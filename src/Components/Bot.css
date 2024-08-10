@@ -77,3 +77,8 @@ img{
     background-color: #e92a1156;
     
 }
+.sorted {
+    display: flex;
+    flex-wrap: wrap;
+    background: #4f8465ac;
+}

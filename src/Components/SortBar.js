@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import BotCard from './BotCard';
+import './Bot.css'
 
 const SortBar = ({bots}) => {
     const [isSorted, setIsSorted]=useState(false)
