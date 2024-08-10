@@ -9,7 +9,7 @@ const  BotArmy = () => {
 
   return (
     <div>
-        <h1>Bot Army</h1>
+        <h2>Bot Army</h2>
         <div className='bot-army'>
       {army.map(bot=>(
          <div key={bot.id} className='bot-card'>

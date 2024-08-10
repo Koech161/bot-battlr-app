@@ -13,7 +13,7 @@ const BotCard = ({bot, handleEnlist}) => {
       <p>Damage:{bot.damage}</p>
       <p>Armor:{bot.armor}</p>
       <Link to={`/bots/${bot.id}`}>View Details</Link>
-      <button onClick={() => handleEnlist(bot)} >Enlist</button>
+      <button className='enlist-Btn' onClick={() => handleEnlist(bot)} >Enlist</button>
     </div>
   )
 }

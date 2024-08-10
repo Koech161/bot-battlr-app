@@ -4,6 +4,7 @@
     padding: 16px;
     margin: 16px;
     text-align: center;
+    background: whitesmoke;
 
 }
 .collection h1 {
@@ -45,10 +46,34 @@ img{
     width: 35px;
     cursor: pointer;
     outline: none;
+    border: none;
+    font-size: 16px;
+}
+.delete-btn:hover {
+    box-shadow: 0 5px 10px  #c41e1e;
+    color: #fcf8f8;
+    border: none;
+    font-size: 20px;
 }
 .release-btn {
     background: greenyellow;
     font-size: 20px;
     border-radius: 10px;
     cursor: pointer;
+    border: none;
+}
+.release-btn:hover {
+    background: #47a16d;
+}
+.enlist-Btn {
+    background: #33be6d88;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+   
+}
+.enlist-Btn:hover {
+    background-color: #e92a1156;
+    
 }
