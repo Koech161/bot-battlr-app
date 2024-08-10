@@ -3,6 +3,7 @@ import BotCard from './BotCard'
 import './Bot.css'
 import { useBot } from '../BotContextProvider'
 import BotArmy from './BotArmy'
+import SortBar from './SortBar'
 const BotCollection = () => {
   const {handleEnlist: contextHandleEnlist} = useBot()
     const [bots, setBots]=useState([])
@@ -57,6 +58,7 @@ const BotCollection = () => {
         contextHandleEnlist(bot)
       }
     }
+    
 
     if(isLoading){
         return <p>Loading...</p>
@@ -82,6 +84,7 @@ const BotCollection = () => {
         </label>
       ))}
     </div>
+    <SortBar bots={bots}/>
         <BotArmy />
         <h1>Available Bots</h1>
         
