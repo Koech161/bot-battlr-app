@@ -4,13 +4,13 @@ import './Bot.css'
 import { useBot } from '../BotContextProvider'
 import BotArmy from './BotArmy'
 const BotCollection = () => {
-  const {handleEnlist} = useBot()
+  const {handleEnlist: contextHandleEnlist} = useBot()
     const [bots, setBots]=useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
     const [filteredBots, setFilteredBots]= useState([])
     const [selectedFilters, setSelectedFilters]= useState([])
-  
+    const [enlistedBots, setEnlistedBots] = useState({} )
   
 
     useEffect(()=>{
@@ -50,6 +50,13 @@ const BotCollection = () => {
         [...prevFilters, value]
       )
     }
+    const handleBotEnlist = (bot) =>{
+      const currentClass = bot.bot_class
+      if(!enlistedBots[currentClass]){
+        setEnlistedBots(prev =>({...prev, [currentClass]: bot}))
+        contextHandleEnlist(bot)
+      }
+    }
 
     if(isLoading){
         return <p>Loading...</p>
@@ -80,7 +87,7 @@ const BotCollection = () => {
         
     <div className='bot-collection'>
     {filteredBots.map(bot=>(
-        <BotCard key={bot.id} bot={bot} handleEnlist={handleEnlist}/>
+        <BotCard key={bot.id} bot={bot} handleEnlist={handleBotEnlist} />
       ))}
     </div>
      
