@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './Bot.css'
+import { useBot } from '../BotContextProvider'
 const BotDetails = () => {
+  const {handleEnlist} = useBot()
     const {id} =useParams()
     const [bot, setBot]= useState(null)
 
@@ -22,7 +24,7 @@ const BotDetails = () => {
       <p>Catchphrase:{bot.catchphrase}</p>
       <p>Created_at:{new Date(bot.created_at).toLocaleDateString()}</p>
       <p>Updated_at:{new Date(bot.updated_at).toLocaleDateString()}</p>
-      <button >Enlist</button>
+      <button onClick={()=>handleEnlist(bot)}>Enlist</button>
     </div>
   )
 }

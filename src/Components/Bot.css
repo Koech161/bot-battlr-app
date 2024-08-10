@@ -1,5 +1,5 @@
 .bot-card {
-    border: 1px solid #665d5d;
+    border: 1px solid #969191;
     border-radius: 8px;
     padding: 16px;
     margin: 16px;
@@ -20,7 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: #e9e3e3;
+    background: #fcf8f8;
 }
 img{
     max-width: 100%;
@@ -31,4 +31,24 @@ img{
     text-align: center;
     border:  2px solid #1b1b1b;
     margin: 16px;
+}
+.bot-army {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #aeb6e4;
+}
+.delete-btn{
+    background: red;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    outline: none;
+}
+.release-btn {
+    background: greenyellow;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }

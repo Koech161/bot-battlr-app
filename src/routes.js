@@ -1,25 +1,25 @@
 import React from 'react'
 import BotCollection from './Components/BotCollection'
-
 import BotDetails from './Components/BotDetails'
-import BotArmy from './Components/BotArmy'
+import NotFound from './Components/NotFound'
 
-const routes = [
+const routes=
+     [
     {
         path:'/',
-        element: <BotCollection onEnlist={(bot)=>{/*handle enlist*/}} />
+        element: <BotCollection />
     },
     {
         path:'/bots',
-        element: <BotCollection onEnlist={(bot)=>{/*handle enlist*/}} />
+        element: <BotCollection />
     },
-   {
-    path:'/army',
-    element: <BotArmy />
-   },
    {
     path:'/bots/:id',
     element: <BotDetails />
+   },
+   {
+    path: '*',
+    element: <NotFound />
    }
 
 ]

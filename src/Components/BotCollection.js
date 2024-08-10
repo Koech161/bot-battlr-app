@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import BotCard from './BotCard'
 import './Bot.css'
-const BotCollection = ({onEnlist}) => {
+import { useBot } from '../BotContextProvider'
+import BotArmy from './BotArmy'
+const BotCollection = () => {
+  const {handleEnlist} = useBot()
     const [bots, setBots]=useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
   
+  
+
     useEffect(()=>{
       const fetchBots = async () =>{
         try {
@@ -34,9 +39,11 @@ const BotCollection = ({onEnlist}) => {
     
     <div className='collection'>
         <h1>Bot Battlr</h1>
+        <BotArmy />
+        <h1>Available Bots</h1>
     <div className='bot-collection'>
     {bots.map(bot=>(
-        <BotCard key={bot.id} bot={bot} onEnlist={onEnlist}/>
+        <BotCard key={bot.id} bot={bot} handleEnlist={handleEnlist}/>
       ))}
     </div>
      
