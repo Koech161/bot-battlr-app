@@ -39,3 +39,19 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+
+
+### Bot Battlr
+
+This Application is Named Bot Battlr , it allow user to  view all bots ,
+ enlist bot to army , release and  discharge bot forever .
+
+ ## Core Features
+ 
+ 1. All available bots are displayed.
+ 2. user is able to view bot details.
+ 3. user can enlist one  bot per class to army.
+ 4. it has button that release bot from army and also discharge button that realse bot forever in service.
+ 5. it has checkbox that on change filter bot by thier class.
+ 6. it has sort button that arrange bot health status in descending order.
+

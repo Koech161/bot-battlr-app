@@ -12,7 +12,6 @@ const  BotArmy = () => {
         <div className='bot-army'>
       {army.map(bot=>(
          <div key={bot.id} className='bot-card'>
-          
          <img src={bot.avatar_url} alt={`Avatar of ${bot.name}`} />
          <h2>{bot.name}</h2>
          <p>Class: {bot.bot_class}</p>

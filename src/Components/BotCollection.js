@@ -4,6 +4,7 @@ import './Bot.css'
 import { useBot } from '../BotContextProvider'
 import BotArmy from './BotArmy'
 import SortBar from './SortBar'
+import SearchBar from './SearchBar'
 const BotCollection = () => {
   const {handleEnlist: contextHandleEnlist} = useBot()
     const [bots, setBots]=useState([])
@@ -71,6 +72,7 @@ const BotCollection = () => {
     
     <div className='collection'>
         <h1>Bot Battlr</h1>
+        <SearchBar  bots={bots}/>
     <div className='filters'>
       <h2>Filter by Class:</h2>
       {uniqueClasses.map(botclass => (
