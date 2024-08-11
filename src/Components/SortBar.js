@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import BotCard from './BotCard';
 import './Bot.css'
+import { useBot } from '../BotContextProvider';
 
 const SortBar = ({bots}) => {
+    const {handleEnlist} =useBot
     const [isSorted, setIsSorted]=useState(false)
     const desecinding =[...bots].sort((a, b)=> b.health - a.health)
     console.log(desecinding);
@@ -18,9 +20,9 @@ const SortBar = ({bots}) => {
     {isSorted && (
         <div className='sorted'>
             {desecinding.map(bot =>(
-                <BotCard key={bot.id} bot={bot} />
+                <BotCard key={bot.id} bot={bot} handleEnlist={handleEnlist} />
             ))}
-        </div>
+        </div> 
 
     )}
     

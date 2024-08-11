@@ -5,6 +5,7 @@ import { useBot } from '../BotContextProvider'
 import BotArmy from './BotArmy'
 import SortBar from './SortBar'
 import SearchBar from './SearchBar'
+import Footer from './Footer'
 const BotCollection = () => {
   const {handleEnlist: contextHandleEnlist} = useBot()
     const [bots, setBots]=useState([])
@@ -95,7 +96,7 @@ const BotCollection = () => {
         <BotCard key={bot.id} bot={bot} handleEnlist={handleBotEnlist} />
       ))}
     </div>
-     
+     <Footer />
     </div>
   )
 }

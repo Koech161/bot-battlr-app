@@ -54,4 +54,4 @@ This Application is Named Bot Battlr , it allow user to  view all bots ,
  4. it has button that release bot from army and also discharge button that realse bot forever in service.
  5. it has checkbox that on change filter bot by thier class.
  6. it has sort button that arrange bot health status in descending order.
-
+7. it has a search that filter bot by their name.
